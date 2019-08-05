@@ -1,0 +1,25 @@
+{
+    "name": "nevar/mpesa",
+    "license": "MIT",
+    "description": "",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "MPESA\\":"src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "~6.0",
+        "laravel/framework": "5.*"
+    },
+    "extra": {
+        "laravel":{
+            "providers":[
+                "MPESA\\Providers\\AuthServiceProvider",
+                "MPESA\\Providers\\ConfigurationServiceProvider",
+                "MPESA\\Providers\\OnlinePaymentServiceProvider"
+            ]
+        }
+    }
+}
