@@ -2,6 +2,7 @@
 
 namespace MPESA\Providers;
 
+use Carbon\Carbon;
 use MPESA\Services\OnlinePaymentService;
 use Illuminate\Support\ServiceProvider;
 
@@ -19,7 +20,7 @@ class OnlinePaymentServiceProvider extends ServiceProvider
             $payment->partyB = config('mpesa.paybill');
             $payment->passKey = config('mpesa.stk_passkey');
             $payment->callBackURL = config('mpesa.callback_url');
-            $payment->timestamp =  now()->format('YmdHis');
+            $payment->timestamp =  Carbon::now()->format('YmdHis');
             return $payment;
         });
     }
