@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'developement_mode' => env('MPESA_DEVELOPEMENT_MODE',true),
+    'developement_mode' => env('MPESA_DEVELOPEMENT_MODE',false),
 
     'username' => env('MPESA_USERNAME',null),
     'password' => env('MPESA_PASSWORD',null),

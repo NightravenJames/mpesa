@@ -16,7 +16,7 @@ class OnlinePaymentServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(OnlinePaymentService::class,function($app){
-            $base_uri = config('mpesa.developement_mode')?'https://sandbox.safaricom.co.ke/mpesa/stkpush/':'https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
+            $base_uri = config('mpesa.developement_mode')?'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/':'https://api.safaricom.co.ke/mpesa/stkpush/v1/';
             $payment = new OnlinePaymentService($base_uri);
             $payment->partyB = config('mpesa.paybill');
             $payment->passKey = config('mpesa.stk_passkey');

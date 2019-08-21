@@ -15,7 +15,7 @@ class AuthServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('mpesa-auth',function($app){
-            $base_uri = config('mpesa.developement_mode')?'https://sandbox.safaricom.co.ke/oauth/v1/':'https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+            $base_uri = config('mpesa.developement_mode')?'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials':'https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
             $auth = new AuthService(config('mpesa.username'),config('mpesa.password'),$base_uri);
             return $auth;
         });

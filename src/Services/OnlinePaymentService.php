@@ -12,7 +12,7 @@ use MPESA\Exceptions\UnauthorizedException;
 
 class OnlinePaymentService {
     use PayOnline;
-    private $access_token,$base_uri;
+    private $access_token;
     public $partyB, $callBackURL,$passkey;
     /**
      * Instatiate with token
@@ -70,6 +70,8 @@ class OnlinePaymentService {
                 throw new PaymentRequiredException($e);
             elseif($status_code == 400)
                throw new BadRequestException($e);
+            else
+                dd($e);
         }
     }
 

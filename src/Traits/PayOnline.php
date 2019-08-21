@@ -6,7 +6,7 @@ trait PayOnline {
     public $accountReference,$transactionDesc;
     public function initiateSTKCheckout(float $amount,string $partyA)
     {
-        return $this->post('v1/processrequest',[
+        return $this->post('processrequest',[
             'json' => [
                 'BusinessShortCode' => $this->partyB,
                 'Password' => base64_encode($this->partyB.$this->passKey.$this->timestamp),
