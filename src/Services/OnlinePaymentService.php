@@ -12,17 +12,17 @@ use MPESA\Exceptions\UnauthorizedException;
 
 class OnlinePaymentService {
     use PayOnline;
-    private $access_token;
+    private $access_token,$base_uri;
     public $partyB, $callBackURL,$passkey;
     /**
      * Instatiate with token
      * 
      * @param string $username,@param string $api_key
      */
-    public function __construct() {
+    public function __construct($base_uri) {
         $this->access_token = Auth::generateToken()->access_token;
         $this->client = new Client([
-            'base_uri' => 'https://sandbox.safaricom.co.ke/mpesa/stkpush/',
+            'base_uri' => $base_uri,
             'headers' => [
                 'Authorization' => "Bearer {$this->access_token}",
                 'Content-Type' => 'application/json',

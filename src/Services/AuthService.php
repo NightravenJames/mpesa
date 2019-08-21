@@ -17,11 +17,11 @@ class AuthService {
     /**
      * Instatiate with credentials
      */
-    public function __construct($username,$password) {
+    public function __construct($username,$password,$base_uri) {
         $this->username = $username;
         $this->password = $password;
         $this->client = new Client([
-            'base_uri' => 'https://sandbox.safaricom.co.ke/oauth/v1/',
+            'base_uri' => $base_uri,
             'headers' => [
                 'Content-Type' => 'application/json',
             ],
