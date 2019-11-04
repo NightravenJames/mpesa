@@ -13,7 +13,7 @@ This package is still under developement. A full and descriptive documentation i
 
 ## Installation
 1. Run the following command to install:
-`composer require nevar/mpesa @dev`
+`composer require nevar/mpesa:v1.0-stable`
 
 2. If you are using older versions of _Laravel 5_ be sure to include the following provivers in your _*app/config.php*_
 
