@@ -10,8 +10,7 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "guzzlehttp/guzzle": "~6.0",
-        "laravel/framework": "~5.3"
+        "guzzlehttp/guzzle": "~6.0"
     },
     "extra": {
         "laravel":{
