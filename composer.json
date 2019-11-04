@@ -8,7 +8,7 @@
             "MPESA\\":"src/"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "guzzlehttp/guzzle": "~6.0"
     },
