@@ -69,8 +69,8 @@ class PaymentController extends Controller
     public function requestPayment(Request $request,OnlinePaymentService $stk)
     {
         // phone number
-        $user_phone_number = "254712345678";
-        $amount = 50;
+        $user_phone_number = "254712345678"; # insert user phone number
+        $amount = 50; # insert amount payable
 
         // this is optional if you want to overide the IPN on your .env
         $stk->callBackURL = "http://8bbea5f4.ngrok.io/api/mpesa/response-callback";
